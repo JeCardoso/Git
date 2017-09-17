@@ -1,0 +1,61 @@
+$git init {Inicializar um repositório}
+
+$git add . {Todos} ou 
+$git index.html {Só esse arquivo} ou 
+$git *php
+
+$git commit -m "Comentario" {Comitar depois add} ou
+$git commit -a -m "Comentario" {Commitar sem add}
+
+$git diff {Comparação} ou
+$git diff --staged {Comparação}
+
+$git log {Todos Commit} ou
+$git log -p {Todos commit e as mudanças} ou
+$git log -p -1 {Numeros de commit e mudanças} ou
+$git log --pretty=oneline {Mostra o código de todos commit}
+
+$gitk {abrir visualizador de relatorio}
+
+$git commit --amend -m "editar" {Editar ultimo commit - adicionando alterações esquecidas}
+
+$git reset HEAD arq.php {Retirar um arquivo ja add (stage area)}
+
+$git checkout -- arquivo.php {Reverter um arquivo ao conteudo do commit anterior}
+
+//Quando deletar um arquivo
+$git rm arquivo.php
+
+$git tag -a v1.0 -m "Versao 1.0" {Criar Tag Versionamento} ou
+$git tag -a v0.0 nomecommit -m "Versao 0.0" {Tag Versionamento commit antigo} ou
+$git tag -d v0.0 {Deletar uma tag}
+
+$git show v0.0 {Informações sobre a Tag}
+
+$git checkout v0.0 {Ver os arquivos do commit da tag}
+
+$git checkout master {Voltar branch/ramificacao master}
+
+// Teste de implementação (cópia de segurança)
+$git checkout -b teste {Criar um branch e redirecionar para ele}
+$git branch teste {Criar um branch nome teste}
+$git checkout teste {Direciona o bash para este branch}
+
+$git merge teste {Trazer alterações de um branch}
+$git branch {Listar todos os branch}
+$git branch -d teste {Apagar um branch}
+
+
+// Repositório para outras musicas
+$git init --bare {Iniciar repositório que pode ser compartilhado em rede(servidor)}
+
+$git clone file:////nome_servidor/projetos/clientes prjrede1 {Clonar git na maquina local mudar nome pasta clonada}
+
+$git remote {Saber o nome do remoto antes de sar um push}
+
+$git push origin master {Enviar arquivos ao servidor branch master}
+
+$git pull origin master {Receber arquivos atualizados servidor mas faz merge com repositório atual}
+
+$git fetch origin branch {Nao fazer merge}
+
